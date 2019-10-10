@@ -1,7 +1,6 @@
 import java.util.*;
 import java.nio.charset.*;
 import java.util.ArrayList;
-//import
 
 public class VladBMWeek2Homework {
     public static void main(String args[]) {
@@ -26,15 +25,13 @@ public class VladBMWeek2Homework {
         String valrandom = getRandomString(c);
         System.out.println(valrandom);
         char ch = valrandom.charAt(0);
-        if(ch == 'a'|| ch == 'e'|| ch == 'i' ||ch == 'o' ||ch == 'u' ||ch == 'y'
-                ||ch == 'A'||ch == 'E'||ch == 'I'||ch == 'O'||ch == 'U'||ch == 'Y'
-                ||ch == ' '){
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'y'
+                || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U' || ch == 'Y'
+                || ch == ' ') {
             System.out.println(valrandom.toLowerCase() + empty_string);
-        }
-        else if(c <= 3 || valrandom.contains("x") || valrandom.contains("X")){
+        } else if (c <= 3 || valrandom.contains("x") || valrandom.contains("X")) {
             System.out.println(valrandom + " is " + valrandom.replace(valrandom, "skipped"));
-        }
-        else {
+        } else {
             String upper = valrandom.toUpperCase();
             array.add(upper);
             System.out.println(array);
@@ -53,8 +50,8 @@ public class VladBMWeek2Homework {
         Set set1 = hmap.entrySet();
         Iterator iterator1 = set1.iterator();
         while (iterator1.hasNext()) {
-            Map.Entry mentry = (Map.Entry)iterator1.next();
-            System.out.print("Name is: "+ mentry.getKey() + " & Email is: ");
+            Map.Entry mentry = (Map.Entry) iterator1.next();
+            System.out.print("Name is: " + mentry.getKey() + " & Email is: ");
             System.out.println(mentry.getValue());
         }
 
@@ -64,7 +61,7 @@ public class VladBMWeek2Homework {
         boolean flag1 = hmap.containsKey("Hot");
         System.out.println("Key Hot exists in HashMap? :" + flag1);
         //d
-        String val = (String)hmap.get("Andrei");
+        String val = (String) hmap.get("Andrei");
         System.out.println("Value for name Andrei is: " + val);
         //e
         hmap.remove("Quer");
@@ -72,8 +69,8 @@ public class VladBMWeek2Homework {
         Set set2 = hmap.entrySet();
         Iterator iterator2 = set2.iterator();
         while (iterator2.hasNext()) {
-            Map.Entry mentry2 = (Map.Entry)iterator2.next();
-            System.out.print("Name is: "+ mentry2.getKey() + " & Email is: ");
+            Map.Entry mentry2 = (Map.Entry) iterator2.next();
+            System.out.print("Name is: " + mentry2.getKey() + " & Email is: ");
             System.out.println(mentry2.getValue());
         }
         //f
@@ -100,22 +97,21 @@ public class VladBMWeek2Homework {
     }
 
     //Exercitiul 3
-    static String getRandomString(int z)
-        {
-            byte[] array = new byte[256];
-            new Random().nextBytes(array);
-            String randomString
-                    = new String(array, Charset.forName("UTF-8"));
-            StringBuffer r = new StringBuffer();
-            for (int k = 0; k < randomString.length(); k++) {
-                char ch = randomString.charAt(k);
-                if (((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
-                        && (z > 0)) {
-                    r.append(ch);
-                    z--;
-                }
+    static String getRandomString(int z) {
+        byte[] array = new byte[256];
+        new Random().nextBytes(array);
+        String randomString
+                = new String(array, Charset.forName("UTF-8"));
+        StringBuffer r = new StringBuffer();
+        for (int k = 0; k < randomString.length(); k++) {
+            char ch = randomString.charAt(k);
+            if (((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+                    && (z > 0)) {
+                r.append(ch);
+                z--;
             }
-
-            return r.toString();
         }
+
+        return r.toString();
+    }
 }
