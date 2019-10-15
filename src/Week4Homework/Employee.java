@@ -1,7 +1,6 @@
 package Week4Homework;
 
 public class Employee {
-    private int idNumber;
     private String name;
     private int age;
     private String gender;
@@ -9,14 +8,6 @@ public class Employee {
     private String jobTitle;
 
     //mutators or setteres
-    public void setIdNumber(int idNumberGiven) {
-        idNumber = idNumberGiven;
-    }
-
-    public void setIdNumber(String idNumberGiven) {
-        idNumber = Integer.parseInt(idNumberGiven);
-    }
-
     public void setName(String nameGiven) {
         name = nameGiven;
     }
@@ -26,7 +17,7 @@ public class Employee {
     }
 
     public void setAge(String ageGiven) {
-        idNumber = Integer.parseInt(ageGiven);
+        age = Integer.parseInt(ageGiven);
     }
 
     public void setGender(String genderGiven) {
@@ -42,10 +33,6 @@ public class Employee {
     }
 
     //getters or accessors
-    public int getIdNumber() {
-        return idNumber;
-    }
-
     public String getName() {
         return name;
     }
@@ -68,21 +55,21 @@ public class Employee {
 
 
     //constructors
-    public Employee(int employeeIdNumber, String employeeName, int employeeAge, String employeeGender, String employeeDepartment, String employeeJobTitle) {
-        idNumber = employeeIdNumber;
+    public Employee(String employeeName, int employeeAge, String employeeGender, String employeeDepartment, String employeeJobTitle) {
         name = employeeName;
         age = employeeAge;
         gender = employeeGender;
         department = employeeDepartment;
         jobTitle = employeeJobTitle;
     }
-
-    public Employee() {
-        idNumber = 0;
-        name = "";
-        age = 0;
-        gender = "";
-        department = "";
-        jobTitle = "";
-    }
+/**
+ public Employee() {
+ idNumber = 0;
+ name = "";
+ age = 0;
+ gender = "";
+ department = "";
+ jobTitle = "";
+ }
+ **/
 }
