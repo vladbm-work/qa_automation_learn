@@ -18,29 +18,40 @@ public class AccessData {
         //employee1.setName("Popescu Andreea");
         //employee1.setJobTitle("Event Planner");
 
-        System.out.println("Name\t\t\tAge\t\tGender\t\tDepartment\t\tJob Title");
-        System.out.println(employee1.getName() + "\t\t" + employee1.getAge() + "\t\t"
-                + employee1.getGender() + "\t\t" + employee1.getDepartment() + "\t\t\t\t" + employee1.getJobTitle());
-        System.out.println(employee2.getName() + "\t\t" + employee2.getAge() + "\t\t"
-                + employee2.getGender() + "\t\t" + employee2.getDepartment() + "\t\t\t\t" + employee2.getJobTitle());
+        //System.out.println("Name\t\t\tAge\t\tGender\t\tDepartment\t\tJob Title");
+        //System.out.println(employee1.getName() + "\t\t" + employee1.getAge() + "\t\t"
+        // + employee1.getGender() + "\t\t" + employee1.getDepartment() + "\t\t\t\t" + employee1.getJobTitle());
+        //System.out.println(employee2.getName() + "\t\t" + employee2.getAge() + "\t\t"
+        // + employee2.getGender() + "\t\t" + employee2.getDepartment() + "\t\t\t\t" + employee2.getJobTitle());
 
 
-        Organization mapOrganization = new Organization();
-        mapOrganization.addEmployee(1, employee1);
-        mapOrganization.addEmployee(2, employee2);
-        mapOrganization.addEmployee(3, employee3);
-        mapOrganization.addEmployee(4, employee4);
-        mapOrganization.addEmployee(5, employee5);
-        mapOrganization.addEmployee(6, employee6);
+        Organization organization = new Organization();
+        organization.addEmployee(1, employee1);
+        organization.addEmployee(2, employee2);
+        organization.addEmployee(3, employee3);
+        organization.addEmployee(4, employee4);
+        organization.addEmployee(5, employee5);
+        organization.addEmployee(6, employee6);
 
-        Employee employeeById = mapOrganization.getEmployee(5);
-        System.out.println(employeeById.getJobTitle());
+        Employee employeeById = organization.getEmployee(5);
+        //System.out.println(employeeById.getJobTitle());
 
+        System.out.println();
+        organization.printMapEmployees();
+        //mapOrganization.printMapEmployees1();
 
-        mapOrganization.printMapEmployees();
-        //mapOrganization.printMapEmployess1();
+        System.out.println();
+        //organization.deleteEmployee(4);
+        //mapOrganization.printMapEmployees1();
+        //organization.printMapEmployees();
 
-        mapOrganization.deleteEmployee(4);
-        mapOrganization.printMapEmployees();
+        System.out.println();
+        //organization.searchEmployeeByName("Mara");
+        //organization.searchEmployeeByAge(30);
+
+        //organization.updateEmployeeName("Busecan", "Vasile Ceteras");
+
+        organization.searchEmployeeByAge(30);
+        organization.updateEmployeeAge("Morar", 45);
     }
 }

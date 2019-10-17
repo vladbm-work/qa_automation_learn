@@ -9,27 +9,27 @@ public class Employee {
 
     //mutators or setteres
     public void setName(String nameGiven) {
-        name = nameGiven;
+        this.name = nameGiven;
     }
 
     public void setAge(int ageGiven) {
-        age = ageGiven;
+        this.age = ageGiven;
     }
 
     public void setAge(String ageGiven) {
-        age = Integer.parseInt(ageGiven);
+        this.age = Integer.parseInt(ageGiven);
     }
 
     public void setGender(String genderGiven) {
-        gender = genderGiven;
+        this.gender = genderGiven;
     }
 
     public void setDepartment(String departmentGiven) {
-        department = departmentGiven;
+        this.department = departmentGiven;
     }
 
     public void setJobTitle(String jobTitleGiven) {
-        jobTitle = jobTitleGiven;
+        this.jobTitle = jobTitleGiven;
     }
 
     //getters or accessors
@@ -56,20 +56,14 @@ public class Employee {
 
     //constructors
     public Employee(String employeeName, int employeeAge, String employeeGender, String employeeDepartment, String employeeJobTitle) {
-        name = employeeName;
-        age = employeeAge;
-        gender = employeeGender;
-        department = employeeDepartment;
-        jobTitle = employeeJobTitle;
+        this.name = employeeName;
+        this.age = employeeAge;
+        this.gender = employeeGender;
+        this.department = employeeDepartment;
+        this.jobTitle = employeeJobTitle;
     }
-/**
- public Employee() {
- idNumber = 0;
- name = "";
- age = 0;
- gender = "";
- department = "";
- jobTitle = "";
- }
- **/
+
+    public String displayEmployeeDetails() {
+        return ("Name: " + name + ", Age: " + age + ", Gender: " + gender + ", Department: " + department + ", Job Title: " + jobTitle);
+    }
 }
